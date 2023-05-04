@@ -347,10 +347,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2341193134009783466, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91629624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341193134009783466, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.4005013
+      objectReference: {fileID: 0}
+    - target: {fileID: 2577362873228835506, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.096556015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2577362873228835506, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9953276
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475744056417286766, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7207641
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475744056417286766, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6931805
+      objectReference: {fileID: 0}
     - target: {fileID: 5916847156638205293, guid: 2fa44f7763fc059489259ee5b771c20d,
         type: 3}
       propertyPath: m_Name
       value: NewHogArcherCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 8670327004926945643, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5296066981436763311, guid: c0fa8524782e7aa4290cf2632bff7bde,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fa44f7763fc059489259ee5b771c20d, type: 3}
