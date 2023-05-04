@@ -285,6 +285,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2001726512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001726515}
+  - component: {fileID: 2001726514}
+  - component: {fileID: 2001726513}
+  m_Layer: 0
+  m_Name: TestArcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2001726513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001726512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992ebf601c0fe9b40a84f56a5ccf38a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2001726514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001726512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fcf4c18010c6c40a6161658801ed4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapon: {fileID: 2001726513}
+--- !u!4 &2001726515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001726512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5593286, y: 0.6209676, z: -9.977984}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1068533962005200213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -292,6 +349,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 754250591758681414, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9950971
+      objectReference: {fileID: 0}
+    - target: {fileID: 754250591758681414, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.09890371
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455725094819364904, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.16017996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455725094819364904, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9870879
+      objectReference: {fileID: 0}
     - target: {fileID: 1513367363731946770, guid: 2fa44f7763fc059489259ee5b771c20d,
         type: 3}
       propertyPath: m_RootOrder
@@ -300,12 +377,12 @@ PrefabInstance:
     - target: {fileID: 1513367363731946770, guid: 2fa44f7763fc059489259ee5b771c20d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1513367363731946770, guid: 2fa44f7763fc059489259ee5b771c20d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.01
       objectReference: {fileID: 0}
     - target: {fileID: 1513367363731946770, guid: 2fa44f7763fc059489259ee5b771c20d,
         type: 3}
@@ -357,6 +434,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.4005013
       objectReference: {fileID: 0}
+    - target: {fileID: 2543971378754569067, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0023263379
+      objectReference: {fileID: 0}
     - target: {fileID: 2577362873228835506, guid: 2fa44f7763fc059489259ee5b771c20d,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -377,10 +459,35 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.6931805
       objectReference: {fileID: 0}
+    - target: {fileID: 3564301760777227207, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.032243956
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572152790424585999, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000011082151
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169466830820584399, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.006795825
+      objectReference: {fileID: 0}
     - target: {fileID: 5916847156638205293, guid: 2fa44f7763fc059489259ee5b771c20d,
         type: 3}
       propertyPath: m_Name
       value: NewHogArcherCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5916847156638205293, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239938061024140487, guid: 2fa44f7763fc059489259ee5b771c20d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000021600985
       objectReference: {fileID: 0}
     - target: {fileID: 8670327004926945643, guid: 2fa44f7763fc059489259ee5b771c20d,
         type: 3}
