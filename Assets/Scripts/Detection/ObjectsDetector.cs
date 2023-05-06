@@ -11,7 +11,7 @@ namespace ArcherNPC_TestTask.Detection
         public bool TryDetectObjects<T>(out List<T> detectedObjects)
              where T : MonoBehaviour
         {
-            detectedObjects = GetDetectedObjectsCashOrCalculate<T>();
+            detectedObjects = GetDetectedObjectsCashOrCalculateNew<T>();
             return detectedObjects.Count != 0;
         }
 
@@ -22,7 +22,7 @@ namespace ArcherNPC_TestTask.Detection
             _detectedObjectsCash.Clear();
         }
 
-        private List<T> GetDetectedObjectsCashOrCalculate<T>()
+        private List<T> GetDetectedObjectsCashOrCalculateNew<T>()
         {
             if (_detectedObjectsCash.TryGetValue(typeof(T), out object value))
             {
