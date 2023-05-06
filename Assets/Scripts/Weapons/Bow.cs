@@ -60,7 +60,6 @@ namespace ArcherNPC_TestTask.Weapons
                 _arrowsStashesSpriteResolver.SetCategoryAndLabel(
                     _arrowsStashesCategory, _arrowPrefab.ArrowsStashLabelName);
             }
-            Debug.Log(_arrowsStashes.enabled);
         }
 
         protected override void OnActivate()
