@@ -2,6 +2,6 @@
 {
     public interface ITrajectoryFunction
     {
-        Trajectory2DInfo GetTrajectoryInfoByFunction(float functionXValue);
+        Trajectory2DInfo GetTrajectoryInfoByFunction(float time);
     }
 }

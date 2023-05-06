@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace ArcherNPC_TestTask.Creatures
 {
-
     public class Hog : MonoBehaviour
     {
         [SerializeField] private Animator _animator;

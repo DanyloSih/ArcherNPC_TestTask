@@ -33,11 +33,14 @@ namespace ArcherNPC_TestTask.Detection
         protected void Update()
         {
             TryGetTarget(out var target);
-            if (_target != target)
+            if (target == null)
+            {
+                _hog.SetTarget(null);
+            }
+            else if (_hog.Target != target)
             {
                 _hog.SetTarget(target);
             }
-            _target = target;
         }
 
         private Transform GetNearestTarget(List<Zombie> targets)

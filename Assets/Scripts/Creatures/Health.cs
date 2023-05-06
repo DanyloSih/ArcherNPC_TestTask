@@ -6,6 +6,7 @@ namespace ArcherNPC_TestTask.Creatures
 {
     public class Health : MonoBehaviour
     {
+        [Min(0)]
         [SerializeField] private float _maxHp;
 
         public UnityEvent Death;
@@ -30,7 +31,7 @@ namespace ArcherNPC_TestTask.Creatures
             }
 
             _hp -= damage;
-            if(_hp < 0 ) 
+            if(_hp <= 0 ) 
             {
                 _hp = 0;
                 Death?.Invoke();

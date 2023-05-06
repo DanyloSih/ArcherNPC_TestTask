@@ -2,6 +2,7 @@
 
 namespace ArcherNPC_TestTask.Creatures
 {
+
     public class Zombie : MonoBehaviour
     {
         [SerializeField] private Vector2 _speedRange = new Vector2(3f, 7f);
@@ -9,6 +10,8 @@ namespace ArcherNPC_TestTask.Creatures
         [SerializeField] private float _destroyDistance = 1f;
 
         private float _speed;
+
+        public Transform Target { get => _target; set => _target = value; }
 
         protected void Start()
         {
@@ -19,18 +22,18 @@ namespace ArcherNPC_TestTask.Creatures
 
         protected void Update()
         {
-            if (_target == null)
+            if (Target == null)
             {
                 return;
             }
 
-            if (Vector3.Distance(_target.position, transform.position) < _destroyDistance)
+            if (Vector3.Distance(Target.position, transform.position) < _destroyDistance)
             {
                 Destroy(gameObject);
                 return;
             }
 
-            transform.Translate((_target.position - transform.position).normalized * Time.deltaTime * _speed);
+            transform.Translate((Target.position - transform.position).normalized * Time.deltaTime * _speed);
         }
     }
 }
