@@ -9,6 +9,7 @@ using OptionData = UnityEngine.UI.Dropdown.OptionData;
 
 namespace ArcherNPC_TestTask.UI
 {
+
     public class ArrowsTypeSwitcher : MonoBehaviour
     {
         [Serializable]

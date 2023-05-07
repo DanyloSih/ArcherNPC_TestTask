@@ -17,6 +17,12 @@ namespace ArcherNPC_TestTask.Weapons
 
         public void StartDrawing(ITrajectoryFunction trajectoryFunction, Action updateTrajectoryCallback = null)
         {
+            if (!enabled)
+            {
+                _lineRenderer.enabled = false;
+                return;
+            }
+
             _trajectoryFunction = trajectoryFunction;
             _segmentTime = _maxTrajectoryTime / _segmentsCount;
             _points = new Vector3[_segmentsCount];
@@ -28,8 +34,16 @@ namespace ArcherNPC_TestTask.Weapons
 
         public void StopDrawing()
         {
-            _lineRenderer.enabled = false;
-            StopCoroutine(_drawCoroutine);
+            if(_drawCoroutine != null)
+            {
+                _lineRenderer.enabled = false;
+                StopCoroutine(_drawCoroutine);
+            }
+        }
+
+        protected void OnDisable()
+        {
+            StopDrawing();
         }
 
         private IEnumerator TrajectoryDrawingProcess(Action updateTrajectoryCallback)
