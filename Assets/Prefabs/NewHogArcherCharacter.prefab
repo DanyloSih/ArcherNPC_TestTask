@@ -402,6 +402,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 638903639013672686}
   - {fileID: 1271719838591641546}
   m_Father: {fileID: 1513367363731946770}
   m_RootOrder: 24
@@ -596,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e7ae8f02a6a6a4d858765af110a095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scatter: 0.2
+  _scatter: 2
   _trajectoryDrawer: {fileID: 4561839610499914786}
   _bow: {fileID: 2264122727463709975}
   _hog: {fileID: 18196279}
@@ -747,11 +748,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3058652138967725960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1271719838591641546}
+  m_Father: {fileID: 3226908652041332549}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4561839610499914786
@@ -766,8 +767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64e6c71581bfa642b000fbc8e3a9c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _segmentsCount: 10
-  _maxTime: 1.5
+  _segmentsCount: 20
+  _maxTrajectoryTime: 12
   _lineRenderer: {fileID: 2641146778025862476}
 --- !u!120 &2641146778025862476
 LineRenderer:
@@ -819,7 +820,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.24610138
+        value: 0.17467499
         inSlope: 0.06887788
         outSlope: 0.06887788
         tangentMode: 0
@@ -1078,10 +1079,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 638903639013672686}
+  m_Children: []
   m_Father: {fileID: 3226908652041332549}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2264122727463709975
 MonoBehaviour:

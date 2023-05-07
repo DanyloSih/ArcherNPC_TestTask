@@ -7,6 +7,7 @@ namespace ArcherNPC_TestTask.Weapons
     public class TrajectoryDrawer : MonoBehaviour
     {
         [SerializeField] private int _segmentsCount = 30;
+        [SerializeField] private float _maxTrajectoryTime = 2f;
         [SerializeField] private LineRenderer _lineRenderer;
 
         private ITrajectoryFunction _trajectoryFunction;
@@ -14,12 +15,10 @@ namespace ArcherNPC_TestTask.Weapons
         private Vector3[] _points;
         private Coroutine _drawCoroutine;
 
-        public void StartDrawing(ITrajectoryFunction trajectoryFunction, Vector2 target, Action updateTrajectoryCallback = null)
+        public void StartDrawing(ITrajectoryFunction trajectoryFunction, Action updateTrajectoryCallback = null)
         {
-            var origin = trajectoryFunction.GetTrajectoryInfoByFunction(0).TrajectoryPoint;
-            var direction = target - origin;
             _trajectoryFunction = trajectoryFunction;
-            _segmentTime = direction.x / _segmentsCount;
+            _segmentTime = _maxTrajectoryTime / _segmentsCount;
             _points = new Vector3[_segmentsCount];
             _lineRenderer.enabled = true;
             _lineRenderer.positionCount = _segmentsCount;

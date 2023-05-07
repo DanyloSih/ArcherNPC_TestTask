@@ -6,6 +6,7 @@ namespace ArcherNPC_TestTask.Weapons
     public class ArrowThrower : MonoBehaviour
     {
         [SerializeField] private float _scatter = 0.2f;
+        [SerializeField] private float _trajectoryHeight = 5f;
         [SerializeField] private TrajectoryDrawer _trajectoryDrawer;
         [SerializeField] private Bow _bow;
         [SerializeField] private Hog _hog;
@@ -13,7 +14,6 @@ namespace ArcherNPC_TestTask.Weapons
         [SerializeField] private Transform _arrowThrowPoint;
 
         private Arrow _arrowInstance;
-        private Vector2 _targetPos;
 
         public Arrow ArrowInstance { get => _arrowInstance; }
 
@@ -31,14 +31,21 @@ namespace ArcherNPC_TestTask.Weapons
                 _arrowInstance.transform.parent = _arrowSpawnPoint;
             }
 
-            GravityTrajectoryFunction drawableTrajectory = GetTragectory();
-            _trajectoryDrawer.StartDrawing(
-                drawableTrajectory, _hog.Target.position, () => UpdateTrajectory(drawableTrajectory));
+            if (_hog.Target != null && _trajectoryDrawer != null)
+            {
+                GravityTrajectoryFunction drawableTrajectory = GetTragectory();
+                _trajectoryDrawer.StartDrawing(
+                    drawableTrajectory, () => UpdateTrajectory(drawableTrajectory));
+            }
         }
 
         public void RemoveArrow()
         {
-            _trajectoryDrawer.StopDrawing();
+            if (_trajectoryDrawer != null)
+            {
+                _trajectoryDrawer.StopDrawing();
+            }
+
             if (_arrowInstance != null)
             {
                 Destroy(_arrowInstance.gameObject);
@@ -54,6 +61,12 @@ namespace ArcherNPC_TestTask.Weapons
 
                 _arrowInstance.transform.parent = null;
                 _arrowInstance.Throw(trajectory);
+
+                if (_trajectoryDrawer != null)
+                {
+                    _trajectoryDrawer.StopDrawing();
+                }
+
                 _arrowInstance = null;
             }
         }
@@ -65,21 +78,16 @@ namespace ArcherNPC_TestTask.Weapons
                 return;
             }
 
-            _targetPos = _hog.Target.position;
             drawableTrajectory.OriginPosition = _arrowThrowPoint.position;
-            drawableTrajectory.TargetPosition = _targetPos;
-        }
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.DrawSphere(_targetPos, 0.5f);
+            drawableTrajectory.TargetPosition = _hog.Target.position;
         }
 
         private GravityTrajectoryFunction GetTragectory()
         {
             return new GravityTrajectoryFunction(
                 _arrowThrowPoint.position,
-                _hog.Target.position);
+                _hog.Target.position + Vector3.right * Random.Range(-_scatter, _scatter),
+                _trajectoryHeight);
         }
     }
 }

@@ -789,7 +789,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hogSpawnPoints:
+  - {fileID: 1676120928}
   - {fileID: 874664094}
+  - {fileID: 1886379878}
   _hogFactory: {fileID: 1450908912}
   _initialWeaponName: Bow
 --- !u!1 &1521037843
