@@ -31,24 +31,6 @@ namespace ArcherNPC_TestTask.Weapons
             }
         }
 
-        /// <summary>
-        /// If the object is activated, it will set the arrow prefab instantly. 
-        /// If the object is deactivated, it will add the arrow prefab to the 
-        /// installation queue, each new installation request
-        /// will DELETE the previous one.
-        /// </summary>
-        public void SetArrowPrefabLazy(Arrow arrowPrefab)
-        {
-            if (IsActivated)
-            {
-                SetArrowPrefab(arrowPrefab);
-            }
-            else
-            {
-                _arrowPrefab = arrowPrefab;
-            }
-        }
-
         public void SetArrowPrefab(Arrow arrowPrefab)
         {
             CheckIsActivated();
@@ -59,6 +41,8 @@ namespace ArcherNPC_TestTask.Weapons
             {
                 _arrowsStashesSpriteResolver.SetCategoryAndLabel(
                     _arrowsStashesCategory, _arrowPrefab.ArrowsStashLabelName);
+
+                _arrowsStashesSpriteResolver.ResolveSpriteToSpriteRenderer();
             }
         }
 

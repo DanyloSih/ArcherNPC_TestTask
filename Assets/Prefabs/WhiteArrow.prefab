@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1351001318460456443}
   - component: {fileID: -169643104227188597}
   m_Layer: 0
-  m_Name: SimpleArrow
+  m_Name: WhiteArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,10 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13dcdc879253c346bb639d81fe05599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 12
+  _damage: 6
   _initialVelocity: 10
-  _arrowsStashesLabelName: Simple_Arrow_Stash
-  _trajectoryMoveSpeed: 12
+  _arrowsStashesLabelName: White_Arrows_Stash
   _raycastOriginPoint: {fileID: 7754960902854882106}
   _ignoredLayers: {fileID: 11400000, guid: f6e7742342fa88342b0ae90f525605a9, type: 2}
   _contactFilter2D:

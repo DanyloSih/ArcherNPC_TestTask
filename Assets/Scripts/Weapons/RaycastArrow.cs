@@ -7,7 +7,6 @@ namespace ArcherNPC_TestTask.Weapons
     public class RaycastArrow : Arrow
     {
         [Tooltip("The speed of advance along the calculated path trajectory.")]
-        [SerializeField] private float _trajectoryMoveSpeed = 1f;
         [SerializeField] private Transform _raycastOriginPoint;
         [Header("Hit filters")]
         [SerializeField] private LayersList _ignoredLayers;
@@ -44,7 +43,7 @@ namespace ArcherNPC_TestTask.Weapons
             while (true)
             {
                 yield return new WaitForFixedUpdate();
-                time += Time.fixedDeltaTime * _trajectoryMoveSpeed;
+                time += Time.fixedDeltaTime * InitialVelocity;
                 
                 Vector2 currentPosition = transform.position;
                 Trajectory2DInfo nextPointInfo = _trajectoryFunction.GetTrajectoryInfoByFunction(time);
